@@ -12,7 +12,14 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		vite: {
+			server: {
+				fs: {
+					allow: ['./static/fonts/', './static/images', './static/svg']
+				}
+			}
+		}
 	}
 };
 
