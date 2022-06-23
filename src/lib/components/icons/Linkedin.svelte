@@ -1,7 +1,7 @@
 <a href="https://linkedin.com/in/pauldolden"
 	><svg
 		xmlns="http://www.w3.org/2000/svg"
-		class="hover:fill-palette-linkedin fill-white transition-all"
+		class="hover:fill-palette-brands-linkedin fill-palette-text transition-all"
 		width="40"
 		height="40"
 		viewBox="0 0 448 512"

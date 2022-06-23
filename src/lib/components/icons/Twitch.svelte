@@ -1,7 +1,7 @@
 <a href="https://twitch.tv/pauldolden"
 	><svg
 		xmlns="http://www.w3.org/2000/svg"
-		class="hover:fill-palette-twitch fill-white transition-all"
+		class="hover:fill-palette-brands-twitch fill-palette-text transition-all"
 		width="40"
 		height="40"
 		viewBox="0 0 512 512"
