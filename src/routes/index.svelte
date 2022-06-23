@@ -1,4 +1,5 @@
 <script lang="ts">
+	import paul from '$lib/assets/images/PaulCartoon.png';
 	import Github from '$lib/components/icons/Github.svelte';
 	import Linkedin from '$lib/components/icons/Linkedin.svelte';
 	import Mail from '$lib/components/icons/Mail.svelte';
@@ -35,11 +36,7 @@
 			</div>
 		</div>
 		<div class="flex h-[400px] justify-center lg:justify-end fill-palette-text">
-			<img
-				src="../../static/images/PaulCartoon.png"
-				alt="Paul being a cartoon"
-				class="fill-palette-text"
-			/>
+			<img src={paul} alt="Paul being a cartoon" class="fill-palette-text" />
 		</div>
 	</div>
 </div>
