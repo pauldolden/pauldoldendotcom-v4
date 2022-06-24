@@ -19,7 +19,7 @@
 				<Twitch />
 				<Mail />
 			</div>
-			<div class="pt-5 text-lg flex flex-col gap-3">
+			<div class="pt-5 text-lg flex flex-col gap-3 max-w-[400px]">
 				<p>
 					Hey, I'm Paul. I'm a developer based in Essex, UK. I currently work as a Full-Stack
 					Engineer for <a href="https://comicrelief.com" class="text-palette-brands-comic"
@@ -35,8 +35,12 @@
 				</p>
 			</div>
 		</div>
-		<div class="flex h-[400px] justify-center lg:justify-end fill-palette-text">
-			<img src={paul} alt="Paul being a cartoon" class="fill-palette-text" />
+		<div class="flex justify-center lg:justify-end fill-palette-text flex-1">
+			<img
+				src={paul}
+				alt="Paul being a cartoon"
+				class="fill-palette-text max-h-[400px] max-w-[280px]"
+			/>
 		</div>
 	</div>
 </div>
