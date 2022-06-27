@@ -7,9 +7,9 @@
 	import Twitter from '$lib/components/icons/Twitter.svelte';
 </script>
 
-<div class="container lg:max-w-5xl">
-	<div class="grid grid-cols-1 lg:grid-cols-2">
-		<div class="flex flex-col gap-1 m-10 mt-0">
+<div class="container m-10 lg:max-w-5xl">
+	<div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
+		<div class="flex flex-col gap-1">
 			<h1 class="text-6xl">Paul Dolden</h1>
 			<h2 class="text-4xl">Full-Stack Engineer</h2>
 			<div class="flex flex-row pt-5 gap-5">
