@@ -4,8 +4,8 @@ module.exports = {
 		extend: {
 			colors: {
 				palette: {
-					background: '#0D090A',
-					'bg-lighter': '#171012',
+					background: '#1A1B25',
+					'bg-lighter': '#16161f',
 					accent: '#E8985E',
 					'accent-darker': '#e38541',
 					text: '#F1E9DB',

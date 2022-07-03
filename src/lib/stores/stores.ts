@@ -5,3 +5,4 @@ const filters = {};
 
 export const categoryStore = writable(categories);
 export const filtersStore = writable(filters);
+export const searchTerm = writable('');

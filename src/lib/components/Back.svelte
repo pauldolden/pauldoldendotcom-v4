@@ -1,5 +1,9 @@
+<script lang="ts">
+	export let path: string;
+</script>
+
 <a
-	href="/"
+	href={path}
 	class="flex gap-4 items-center hover:text-palette-brands-blog hover:fill-palette-brands-blog transition-colors fill-palette-text"
 >
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="fill-inherit" width="30"

@@ -1,11 +1,5 @@
 <script lang="ts">
-	import paul from '$lib/assets/images/PaulCartoon.png';
-	import Blog from '$lib/components/icons/Blog.svelte';
-	import Github from '$lib/components/icons/Github.svelte';
-	import Linkedin from '$lib/components/icons/Linkedin.svelte';
-	import Mail from '$lib/components/icons/Mail.svelte';
-	import Twitch from '$lib/components/icons/Twitch.svelte';
-	import Twitter from '$lib/components/icons/Twitter.svelte';
+	import IconNav from '$lib/components/IconNav.svelte';
 </script>
 
 <svelte:head>
@@ -17,14 +11,7 @@
 		<div class="flex flex-col gap-1">
 			<h1 class="text-6xl text-palette-accent">Paul Dolden</h1>
 			<h2 class="text-4xl text-palette-accent">Full-Stack Engineer</h2>
-			<div class="flex flex-row flex-wrap pt-5 gap-5">
-				<Github />
-				<Linkedin />
-				<Twitter />
-				<Twitch />
-				<Mail />
-				<Blog />
-			</div>
+			<IconNav />
 			<div class="pt-5 text-lg flex flex-col gap-3">
 				<p>
 					Hey, I'm Paul. I'm a developer based in Essex, UK. I currently work as a Full-Stack
@@ -52,7 +39,7 @@
 		</div>
 		<div class="flex justify-center lg:justify-end fill-palette-text flex-1">
 			<img
-				src={paul}
+				src="../../src/lib/assets/images/PaulCartoon.png"
 				alt="Paul being a cartoon"
 				class="fill-palette-text max-h-[400px] max-w-[280px]"
 			/>

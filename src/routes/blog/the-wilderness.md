@@ -1,7 +1,7 @@
 ---
 title: 'The Wilderness'
 date: 2022-01-22
-category: [general, learning, journey, babyloss]
+category: [learning]
 image: 'https://images.unsplash.com/photo-1527489377706-5bf97e608852?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2459&q=80'
 description: 'My journey into code.'
 path: '/the-wilderness'
@@ -15,10 +15,10 @@ The above being said though, and irrespective of any neurotic self doubt about w
 
 There are a whole bunch of reasons why I want to do this. Here's a few:
 
-1. I think looking back on where I started, might help me chop a couple of limbs off of this black knight that is my self doubt.
-2. My path wasn't exactly a straight one, and much of it I don't entirely remember, and I'd like to try to.
-3. When I was starting, all I did was look for examples of people who hadn't failed, and the more of those stories that exist, the better.
-4. People on podcasts tell me I should. (Not gonna lie, mainly this.)
+- I think looking back on where I started, might help me chop a couple of limbs off of this black knight that is my self doubt.
+- My path wasn't exactly a straight one, and much of it I don't entirely remember, and I'd like to try to.
+- When I was starting, all I did was look for examples of people who hadn't failed, and the more of those stories that exist, the better.
+- People on podcasts tell me I should. (Not gonna lie, mainly this.)
 
 So... Here... We... Go...
 

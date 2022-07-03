@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { categoryStore } from '$lib/stores/stores';
 
-	import Back from '$lib/components/icons/Back.svelte';
+	import Back from '$lib/components/Back.svelte';
 	import Filter from '$lib/components/Filter.svelte';
 	import Sort from '$lib/components/Sort.svelte';
 	import Searchbar from '$lib/components/Searchbar.svelte';
@@ -14,11 +14,11 @@
 
 <header class="flex flex-col">
 	<div class="flex-row justify-between items-center flex py-10">
-		<Back />
+		<Back path="/" />
 		<div class="flex items-center gap-4">
 			<Searchbar />
 			<Filter {categories} />
-			<Sort />
+			<!-- <Sort /> -->
 		</div>
 	</div>
 	<div class="flex justify-between items-center">

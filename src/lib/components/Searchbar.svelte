@@ -1,5 +1,6 @@
 <script>
 	import Search from './icons/Search.svelte';
+	import { searchTerm } from '$lib/stores/stores';
 </script>
 
 <div
@@ -8,7 +9,8 @@
 	<input
 		type="search"
 		placeholder="Search for posts."
-		class="bg-inherit text-palette-background outline-none"
+		class="bg-inherit text-palette-background outline-none placeholder:text-palette-background"
+		bind:value={$searchTerm}
 	/>
 	<Search />
 </div>

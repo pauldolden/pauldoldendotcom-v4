@@ -1,18 +1,18 @@
 <script lang="ts" context="module">
 	import { categoryStore } from '$lib/stores/stores';
-	const posts = import.meta.glob('./*.md');
+	const allPosts = import.meta.glob('./*.md');
 
 	let body: Promise<PostMetadata>[] = [];
 	// fetch all metadata from .md blog posts
-	for (const path in posts) {
-		const metadata = posts[path]().then(({ metadata }) => metadata);
+	for (const path in allPosts) {
+		const metadata = allPosts[path]().then(({ metadata }: { metadata: PostMetadata }) => metadata);
 		body.push(metadata);
 	}
 
 	export const load = async () => {
-		const posts = await Promise.all(body);
+		const allPosts = await Promise.all(body);
 		// Build up post categories dynamically based on unique categories that exist.
-		posts.forEach((post) => {
+		allPosts.forEach((post) => {
 			categoryStore.update((categories) => {
 				const newCategories = post.category.filter((category) => !categories.includes(category));
 
@@ -21,7 +21,7 @@
 		});
 		return {
 			props: {
-				posts
+				allPosts
 			}
 		};
 	};
@@ -32,18 +32,23 @@
 	import PostCard from '$lib/components/PostCard.svelte';
 	import type { PostMetadata } from '$lib/types';
 	import { filtersStore } from '$lib/stores/stores';
-
-	let filters: string[] = [];
+	export let allPosts: PostMetadata[];
+	let posts: PostMetadata[];
 
 	filtersStore.subscribe((storeValues) => {
+		let filters: string[] = [];
+
 		for (let [key, value] of Object.entries(storeValues)) {
 			if (value) {
 				filters.push(key);
 			}
 		}
-	});
+		let filteredPosts = allPosts.filter((post) => {
+			return post.category.some((category) => filters.includes(category));
+		});
 
-	export let posts: PostMetadata[];
+		posts = filters.length > 0 ? filteredPosts : allPosts;
+	});
 </script>
 
 <svelte:head>

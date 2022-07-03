@@ -4,6 +4,7 @@ export const config = {
 	smartypants: {
 		dashes: 'oldschool'
 	},
+	layout: './src/lib/components/Post.svelte',
 
 	remarkPlugins: [],
 	rehypePlugins: []
