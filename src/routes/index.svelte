@@ -1,5 +1,6 @@
 <script lang="ts">
 	import paul from '$lib/assets/images/PaulCartoon.png';
+	import Blog from '$lib/components/icons/Blog.svelte';
 	import Github from '$lib/components/icons/Github.svelte';
 	import Linkedin from '$lib/components/icons/Linkedin.svelte';
 	import Mail from '$lib/components/icons/Mail.svelte';
@@ -7,31 +8,45 @@
 	import Twitter from '$lib/components/icons/Twitter.svelte';
 </script>
 
-<div class="container m-10 lg:max-w-5xl">
+<svelte:head>
+	<title>Paul Dolden</title>
+</svelte:head>
+
+<section class="container m-10 lg:max-w-5xl">
 	<div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
 		<div class="flex flex-col gap-1">
-			<h1 class="text-6xl">Paul Dolden</h1>
-			<h2 class="text-4xl">Full-Stack Engineer</h2>
-			<div class="flex flex-row pt-5 gap-5">
+			<h1 class="text-6xl text-palette-accent">Paul Dolden</h1>
+			<h2 class="text-4xl text-palette-accent">Full-Stack Engineer</h2>
+			<div class="flex flex-row flex-wrap pt-5 gap-5">
 				<Github />
 				<Linkedin />
 				<Twitter />
 				<Twitch />
 				<Mail />
+				<Blog />
 			</div>
 			<div class="pt-5 text-lg flex flex-col gap-3">
 				<p>
 					Hey, I'm Paul. I'm a developer based in Essex, UK. I currently work as a Full-Stack
 					Engineer for <a href="https://comicrelief.com" class="text-palette-brands-comic"
 						>Comic Relief
-					</a>, a large UK charity.
+					</a>, a major UK charity, working with
+					<span class="text-palette-brands-react">React</span>
+					and <span class="text-palette-brands-aws">AWS Serverless</span>.
 				</p>
 				<p>
-					I'm a <span class="text-palette-brands-typescript">TypeScript</span> boy and GIF
-					enthusiast. I like building web applications with tools like
-					<span class="text-palette-brands-svelte">SvelteKit</span> and
-					<span class="text-white">NextJS</span>, and more recently, building out serverless
-					back-ends ontop of AWS Lambda.
+					I'm a <a
+						href="https://www.typescriptlang.org/"
+						target="_blank"
+						class="text-palette-brands-typescript">TypeScript</a
+					>
+					boy and GIF enthusiast. I like building web applications with tools like
+					<a href="https://kit.svelte.dev/" target="_blank" class="text-palette-brands-svelte"
+						>SvelteKit</a
+					>
+					and
+					<a href="https://nextjs.org/" target="_blank" class="text-white">NextJS</a>, and more
+					recently, building out serverless back-ends ontop of AWS Lambda.
 				</p>
 			</div>
 		</div>
@@ -43,4 +58,4 @@
 			/>
 		</div>
 	</div>
-</div>
+</section>
