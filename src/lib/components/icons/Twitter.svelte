@@ -2,8 +2,8 @@
 	><svg
 		xmlns="http://www.w3.org/2000/svg"
 		class="hover:fill-palette-brands-twitter fill-palette-text transition-all"
-		width="35"
-		height="35"
+		width="30"
+		height="30"
 		viewBox="0 0 512 512"
 	>
 		<title>Twitter</title>
