@@ -3,7 +3,6 @@
 
 	import Back from '$lib/components/Back.svelte';
 	import Filter from '$lib/components/Filter.svelte';
-	import Sort from '$lib/components/Sort.svelte';
 	import Searchbar from '$lib/components/Searchbar.svelte';
 
 	let categories: string[];
