@@ -1,4 +1,4 @@
-<a href="https://twitter.com/pauldolden"
+<a href="https://twitter.com/pauldolden" target="_blank"
 	><svg
 		xmlns="http://www.w3.org/2000/svg"
 		class="hover:fill-palette-brands-twitter fill-palette-text transition-all"

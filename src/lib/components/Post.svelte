@@ -17,7 +17,7 @@
 				<p>Posted: {date}</p>
 			</div>
 		</div>
-		<article class="flex flex-col gap-4">
+		<article class="flex flex-col gap-4 font-light">
 			<slot />
 		</article>
 	</div>

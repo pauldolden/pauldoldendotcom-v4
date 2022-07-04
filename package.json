@@ -34,6 +34,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"dayjs": "^1.11.3"
+		"dayjs": "^1.11.3",
+		"remark-html": "^15.0.1"
 	}
 }

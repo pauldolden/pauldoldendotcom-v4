@@ -1,4 +1,13 @@
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
+import remarkHtml from 'remark-html';
 
-export const mdsvexConfig = require('./mdsvex.config.cjs');
+export const mdsvexConfig = {
+	extensions: ['.svelte.md', '.md', '.svx'],
+	smartypants: {
+		dashes: 'oldschool'
+	},
+	remarkPlugins: [remarkHtml],
+	rehypePlugins: [],
+	layout: {
+		blog: './src/lib/components/Post.svelte'
+	}
+};

@@ -10,8 +10,8 @@
 <section class="container m-10 lg:max-w-5xl">
 	<div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
 		<div class="flex flex-col gap-1">
-			<h1 class="text-6xl text-palette-accent">Paul Dolden</h1>
-			<h2 class="text-4xl text-palette-accent">Full-Stack Engineer</h2>
+			<h1 class="text-5xl md:text-6xl text-palette-accent">Paul Dolden</h1>
+			<h2 class="text-3xl md:text-4xl text-palette-accent">Full-Stack Engineer</h2>
 			<IconNav />
 			<div class="pt-5 text-lg flex flex-col gap-3">
 				<p>

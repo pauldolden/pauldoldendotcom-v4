@@ -56,9 +56,9 @@
 	<title>Blog | Paul Dolden</title>
 </svelte:head>
 
-<section class="flex flex-col w-full">
+<section class="p-5 flex flex-col w-full">
 	<Header postCount={posts.length} />
-	<div class="grid grid-cols-3 gap-4 py-4">
+	<div class="grid md:grid-cols-3 gap-4 py-4">
 		{#each posts as post}
 			<PostCard {post} />
 		{/each}

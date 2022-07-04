@@ -2,7 +2,7 @@
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 448 512"
-		class="hover:fill-palette-brands-blog fill-palette-text transition-all"
+		class="hover:fill-palette-brands-blog fill-palette-text transition-all w-[40px]"
 		width="40"
 		height="40"
 		><title>Blog</title

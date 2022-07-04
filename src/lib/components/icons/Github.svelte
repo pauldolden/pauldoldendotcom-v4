@@ -1,4 +1,4 @@
-<a href="https://github.com/pauldolden"
+<a href="https://github.com/pauldolden" target="_blank"
 	><svg
 		xmlns="http://www.w3.org/2000/svg"
 		class="hover:fill-palette-brands-github fill-palette-text transition-all"

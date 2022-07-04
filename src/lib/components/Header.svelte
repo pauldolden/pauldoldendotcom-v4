@@ -12,7 +12,7 @@
 </script>
 
 <header class="flex flex-col">
-	<div class="flex-row justify-between items-center flex py-10">
+	<div class="justify-between items-center flex py-10">
 		<Back path="/" />
 		<div class="flex items-center gap-4">
 			<Searchbar />
@@ -20,7 +20,7 @@
 			<!-- <Sort /> -->
 		</div>
 	</div>
-	<div class="flex justify-between items-center">
+	<div class="flex flex-col md:flex-row justify-between items-center mb-3">
 		<h1 class="font-bold text-3xl">Blog</h1>
 		<span>{postCount} posts found.</span>
 	</div>

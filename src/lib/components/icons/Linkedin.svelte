@@ -1,4 +1,4 @@
-<a href="https://linkedin.com/in/pauldolden"
+<a href="https://linkedin.com/in/pauldolden" target="_blank"
 	><svg
 		xmlns="http://www.w3.org/2000/svg"
 		class="hover:fill-palette-brands-linkedin fill-palette-text transition-all"
