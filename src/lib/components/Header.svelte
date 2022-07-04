@@ -14,7 +14,7 @@
 <header class="flex flex-col">
 	<div class="justify-between items-center flex py-10">
 		<Back path="/" />
-		<div class="flex items-center gap-4">
+		<div class="flex items-center gap-6">
 			<Searchbar />
 			<Filter {categories} />
 			<!-- <Sort /> -->
@@ -22,6 +22,6 @@
 	</div>
 	<div class="flex flex-col md:flex-row justify-between items-center mb-3">
 		<h1 class="font-bold text-3xl">Blog</h1>
-		<span>{postCount} posts found.</span>
+		<span class="font-normal">{postCount} posts found.</span>
 	</div>
 </header>

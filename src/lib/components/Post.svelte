@@ -13,11 +13,11 @@
 		<div>
 			<img src={image} alt={title} class="w-full h-[300px] object-cover" />
 			<div class="my-4">
-				<h1 class="text-6xl mb-3">{title}</h1>
-				<p>Posted: {date}</p>
+				<h1 class="text-6xl mb-3 font-semibold">{title}</h1>
+				<p class="font-medium">Posted: {date}</p>
 			</div>
 		</div>
-		<article class="flex flex-col gap-4 font-light">
+		<article class="flex flex-col gap-4 font-normal">
 			<slot />
 		</article>
 	</div>

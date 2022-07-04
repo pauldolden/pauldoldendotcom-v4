@@ -4,12 +4,12 @@
 </script>
 
 <div
-	class="ring-2 ring-transparent focus-within:ring-palette-brands-blog rounded-full py-3 px-3 md:px-7 bg-palette-light flex outline-none"
+	class="ring-2 ring-transparent focus-within:ring-palette-brands-blog rounded-md py-3 px-3 md:px-7 bg-palette-light flex outline-none"
 >
 	<input
 		type="search"
 		placeholder="Search for posts."
-		class="bg-inherit text-palette-background outline-none placeholder:text-palette-background"
+		class="bg-inherit text-palette-background outline-none placeholder:text-palette-background placeholder:font-normal"
 		bind:value={$filtersStore.searchTerm}
 	/>
 	<Search />

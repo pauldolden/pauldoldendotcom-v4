@@ -76,12 +76,12 @@
 		<div class="flex gap-4 justify-between">
 			<button
 				on:click|preventDefault={clearFilters}
-				class="bg-palette-accent text-palette-background flex-1 py-2 rounded-full mt-3 hover:bg-palette-brands-blog transition active:bg-palette-accent-darker flex items-center justify-center"
+				class="bg-palette-accent text-palette-background flex-1 py-2 rounded-md mt-3 hover:bg-palette-brands-blog transition active:bg-palette-accent-darker flex items-center justify-center"
 			>
 				Clear
 			</button>
 			<button
-				class="bg-palette-accent text-palette-background flex-1 py-2 rounded-full mt-3 hover:bg-palette-brands-blog transition active:bg-palette-accent-darker flex items-center justify-center"
+				class="bg-palette-accent text-palette-background flex-1 py-2 rounded-md mt-3 hover:bg-palette-brands-blog transition active:bg-palette-accent-darker flex items-center justify-center"
 			>
 				Submit
 			</button>

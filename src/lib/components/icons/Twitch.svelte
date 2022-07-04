@@ -2,8 +2,8 @@
 	><svg
 		xmlns="http://www.w3.org/2000/svg"
 		class="hover:fill-palette-brands-twitch fill-palette-text transition-all"
-		width="40"
-		height="40"
+		width="35"
+		height="35"
 		viewBox="0 0 512 512"
 	>
 		<title>Twitch</title>
