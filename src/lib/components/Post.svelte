@@ -1,5 +1,8 @@
 <script>
 	import Back from '$lib/components/Back.svelte';
+	import dayjs from 'dayjs';
+	import advancedFormat from 'dayjs/plugin/advancedFormat.js';
+	dayjs.extend(advancedFormat);
 	export let title;
 	export let image;
 	export let date;
@@ -14,7 +17,7 @@
 			<img src={image} alt={title} class="w-full h-[300px] object-cover" />
 			<div class="my-4">
 				<h1 class="text-6xl mb-3 font-semibold">{title}</h1>
-				<p class="font-medium">Posted: {date}</p>
+				<p class="font-normal">Posted: {dayjs(post.date).format('Do MMMM YYYY')}</p>
 			</div>
 		</div>
 		<article class="flex flex-col gap-4 font-normal">
