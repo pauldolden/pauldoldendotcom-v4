@@ -1,11 +1,4 @@
-export const config = {
-	extensions: ['.svelte.md', '.md', '.svx'],
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
 
-	smartypants: {
-		dashes: 'oldschool'
-	},
-	layout: './src/lib/components/Post.svelte',
-
-	remarkPlugins: [],
-	rehypePlugins: []
-};
+export const mdsvexConfig = require('./mdsvex.config.cjs');

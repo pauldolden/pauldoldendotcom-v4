@@ -1,8 +1,4 @@
 <script>
-	// import dayjs from 'dayjs';
-	// import advancedFormat from 'dayjs/plugin/advancedFormat';
-	// dayjs.extend(advancedFormat);
-
 	import Back from '$lib/components/Back.svelte';
 	export let title;
 	export let image;

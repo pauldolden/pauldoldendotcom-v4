@@ -1,7 +1,7 @@
 import adapter from '@sveltejs/adapter-auto';
 import preprocess from 'svelte-preprocess';
 import { mdsvex } from 'mdsvex';
-import { config as mdsvexConfig } from './mdsvex.config.js';
+import { mdsvexConfig } from './mdsvex.config.js';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -20,7 +20,7 @@ const config = {
 		vite: {
 			server: {
 				fs: {
-					allow: ['./static/fonts/', './static/images', './static/svg']
+					allow: ['./static/fonts/']
 				}
 			}
 		}

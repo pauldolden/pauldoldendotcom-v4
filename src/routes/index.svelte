@@ -1,5 +1,6 @@
 <script lang="ts">
 	import IconNav from '$lib/components/IconNav.svelte';
+	import paul from '$lib/assets/PaulCartoon.png';
 </script>
 
 <svelte:head>
@@ -39,7 +40,7 @@
 		</div>
 		<div class="flex justify-center lg:justify-end fill-palette-text flex-1">
 			<img
-				src="../../src/lib/assets/images/PaulCartoon.png"
+				src={paul}
 				alt="Paul being a cartoon"
 				class="fill-palette-text max-h-[400px] max-w-[280px]"
 			/>
