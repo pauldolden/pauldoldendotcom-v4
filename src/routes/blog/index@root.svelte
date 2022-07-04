@@ -53,7 +53,7 @@
 </script>
 
 <svelte:head>
-	<title>Blog | Paul Dolden</title>
+	<title>Blog | pauldolden.com</title>
 </svelte:head>
 
 <section class="p-5 flex flex-col w-full">

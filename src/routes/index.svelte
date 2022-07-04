@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>Paul Dolden</title>
+	<title>pauldolden.com</title>
 </svelte:head>
 
 <section class="container m-10 lg:max-w-5xl">
