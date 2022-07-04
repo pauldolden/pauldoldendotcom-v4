@@ -32,22 +32,23 @@
 	import PostCard from '$lib/components/PostCard.svelte';
 	import type { PostMetadata } from '$lib/types';
 	import { filtersStore } from '$lib/stores/stores';
+	import { filterBySearchTerm } from '$lib/utils/filterBySearchTerm';
+	import { filterByCategory } from '$lib/utils/filterByCategory';
 	export let allPosts: PostMetadata[];
-	let posts: PostMetadata[];
+	let posts: PostMetadata[] = [];
 
 	filtersStore.subscribe((storeValues) => {
 		let filters: string[] = [];
+		let searchTerm = storeValues.searchTerm.toLowerCase();
 
-		for (let [key, value] of Object.entries(storeValues)) {
+		for (let [key, value] of Object.entries(storeValues.categories)) {
 			if (value) {
 				filters.push(key);
 			}
 		}
-		let filteredPosts = allPosts.filter((post) => {
-			return post.category.some((category) => filters.includes(category));
-		});
 
-		posts = filters.length > 0 ? filteredPosts : allPosts;
+		posts = allPosts.filter((post) => filterByCategory(post, filters));
+		posts = posts.filter((post) => filterBySearchTerm(post, searchTerm));
 	});
 </script>
 

@@ -7,7 +7,7 @@
 	let show = false;
 
 	filtersStore.subscribe((storeValues) => {
-		formValues = storeValues;
+		formValues = storeValues.categories;
 	});
 
 	function closeModal() {
@@ -15,17 +15,17 @@
 	}
 
 	function onSubmit() {
-		filtersStore.update(() => {
-			return {
-				...formValues
-			};
+		filtersStore.update((storeValues) => {
+			storeValues.categories = { ...formValues };
+			return storeValues;
 		});
 		closeModal();
 	}
 
 	function clearFilters() {
-		filtersStore.update(() => {
-			return {};
+		filtersStore.update((storeValues) => {
+			storeValues.categories = {};
+			return storeValues;
 		});
 	}
 </script>
