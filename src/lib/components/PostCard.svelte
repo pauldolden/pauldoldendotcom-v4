@@ -5,8 +5,6 @@
 	import Chip from './Chip.svelte';
 
 	export let post: import('$lib/types').PostMetadata;
-
-	let categories = post.category;
 </script>
 
 <a href={`blog${post.path}`}>
@@ -22,7 +20,7 @@
 			<p class="font-normal text-sm">{post.description}</p>
 		</div>
 		<div class="flex flex-wrap gap-2 pt-4">
-			{#each categories as category}
+			{#each post.category as category}
 				<Chip {category} />
 			{/each}
 		</div>
