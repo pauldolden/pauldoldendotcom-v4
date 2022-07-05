@@ -3,10 +3,13 @@
 	import Back from '$lib/components/Back.svelte';
 	import dayjs from 'dayjs';
 	import advancedFormat from 'dayjs/plugin/advancedFormat.js';
+	import PostImage from './PostImage.svelte';
 	dayjs.extend(advancedFormat);
 	export let title;
 	export let image;
 	export let date;
+	export let photographer;
+	export let photographerLink;
 </script>
 
 <section class="py-4 pb-7">
@@ -15,7 +18,7 @@
 	</div>
 	<div>
 		<div>
-			<img src={image} alt={title} class="w-full h-[300px] object-cover" />
+			<PostImage {title} {image} {photographer} {photographerLink} />
 			<div class="my-4">
 				<h1 class="text-4xl md:text-6xl mb-3 font-semibold">{title}</h1>
 				<p class="font-normal">Posted: {dayjs(date).format('Do MMMM YYYY')}</p>

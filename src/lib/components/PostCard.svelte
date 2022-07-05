@@ -13,8 +13,8 @@
 	<article
 		class="bg-palette-bg-lighter rounded-lg px-4 py-5 hover:scale-105 transition flex flex-col justify-between h-full"
 	>
-		<div>
-			<img src={post.image} alt={post.title} class="pb-4" />
+		<div class="flex flex-col">
+			<img src={post.image} alt={post.title} class="pb-4 max-h-[190px]" />
 			<div class="py-2">
 				<h3 class="font-semibold text-xl">{post.title}</h3>
 				<p class="font-medium text-xs">Posted: {dayjs(post.date).format('Do MMMM YYYY')}</p>
