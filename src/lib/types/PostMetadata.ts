@@ -5,4 +5,7 @@ export interface PostMetadata {
 	image: string;
 	description: string;
 	path: string;
+	stage: 'draft' | 'published';
+	photographer: 'string';
+	photographerLink: 'string';
 }

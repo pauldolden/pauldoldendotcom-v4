@@ -3,8 +3,11 @@ title: 'The Wilderness'
 date: 2022-01-22
 category: [learning]
 image: 'https://images.unsplash.com/photo-1527489377706-5bf97e608852?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2459&q=80'
+photographer: 'Hendrik Cornelissen'
+photographerLink: 'https://unsplash.com/@the_bracketeer'
 description: 'Wherein I discuss my journey into code, and the sad twisting paths that I followed.'
 path: '/the-wilderness'
+stage: 'published'
 ---
 
 Hey, just FYI, there are some pretty significant shifts in tone in this... whatever this is. I didn't really road map it and it's far more introspective and personal than it is technical. It is very much me just trying to make some sense of my journey into code and how and why certain things happened.

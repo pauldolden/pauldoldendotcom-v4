@@ -4,14 +4,18 @@
 	const allPosts = import.meta.glob('./*.md');
 
 	let body: Promise<PostMetadata>[] = [];
-	// fetch all metadata from .md blog posts
+	// Fetch all metadata from .md blog posts
 	for (const path in allPosts) {
 		const metadata = allPosts[path]().then(({ metadata }: { metadata: PostMetadata }) => metadata);
 		body.push(metadata);
 	}
-
+	// Loader
 	export const load = async () => {
-		const allPosts = await Promise.all(body);
+		let allPosts = await Promise.all(body);
+		// @ts-ignore
+		if (import.meta.env.PROD) {
+			allPosts = allPosts.filter((post) => post.stage === 'published');
+		}
 		// Build up post categories dynamically based on unique categories that exist.
 		allPosts.forEach((post) => {
 			categoryStore.update((categories) => {

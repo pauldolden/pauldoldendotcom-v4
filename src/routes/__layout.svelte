@@ -1,6 +1,4 @@
 <script>
-	import HeaderTop from '$lib/components/HeaderTop.svelte';
-
 	import '../app.css';
 </script>
 
