@@ -16,6 +16,11 @@
 		if (import.meta.env.PROD) {
 			allPosts = allPosts.filter((post) => post.stage === 'published');
 		}
+		allPosts.sort((a, b) => {
+			const dateB = new Date(b.date);
+			const dateA = new Date(a.date);
+			return dateB.getTime() - dateA.getTime();
+		});
 		// Build up post categories dynamically based on unique categories that exist.
 		allPosts.forEach((post) => {
 			categoryStore.update((categories) => {

@@ -34,7 +34,8 @@
 					>
 					and
 					<a href="https://nextjs.org/" target="_blank" class="text-white">NextJS</a>, and more
-					recently, building out serverless back-ends ontop of AWS Lambda.
+					recently, building out serverless back-ends on-top of
+					<span class="text-palette-brands-aws">AWS Lambda</span>.
 				</p>
 			</div>
 		</div>

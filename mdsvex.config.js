@@ -1,4 +1,5 @@
 import remarkHtml from 'remark-html';
+import rehypeInferReadingTimeMeta from 'rehype-infer-reading-time-meta';
 
 export const mdsvexConfig = {
 	extensions: ['.svelte.md', '.md', '.svx'],
@@ -6,7 +7,7 @@ export const mdsvexConfig = {
 		dashes: 'oldschool'
 	},
 	remarkPlugins: [remarkHtml],
-	rehypePlugins: [],
+	rehypePlugins: [rehypeInferReadingTimeMeta],
 	layout: {
 		blog: './src/lib/components/Post.svelte'
 	}
