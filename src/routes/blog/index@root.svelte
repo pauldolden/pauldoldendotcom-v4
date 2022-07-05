@@ -1,5 +1,6 @@
 <script lang="ts" context="module">
 	import { categoryStore } from '$lib/stores/stores';
+	// @ts-ignore
 	const allPosts = import.meta.glob('./*.md');
 
 	let body: Promise<PostMetadata>[] = [];

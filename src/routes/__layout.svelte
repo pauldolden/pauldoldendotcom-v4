@@ -1,10 +1,11 @@
 <script>
+	import HeaderTop from '$lib/components/HeaderTop.svelte';
+
 	import '../app.css';
-	import favicon from '$lib/assets/favicon.png';
 </script>
 
 <svelte:head>
-	<link rel="icon" type="image/svg" href={favicon} />
+	<link rel="icon" type="image/svg" href="/images/favicon.png" />
 </svelte:head>
 
 <main

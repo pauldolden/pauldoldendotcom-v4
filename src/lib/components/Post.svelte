@@ -1,4 +1,5 @@
 <script>
+	// @ts-nocheck
 	import Back from '$lib/components/Back.svelte';
 	import dayjs from 'dayjs';
 	import advancedFormat from 'dayjs/plugin/advancedFormat.js';

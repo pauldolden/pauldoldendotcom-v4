@@ -1,6 +1,5 @@
 <script lang="ts">
 	import IconNav from '$lib/components/IconNav.svelte';
-	import paul from '$lib/assets/PaulCartoon.png';
 </script>
 
 <svelte:head>
@@ -17,8 +16,9 @@
 				<p>
 					Hey, I'm Paul. I'm a developer based in Essex, UK. I currently work as a Full-Stack
 					Engineer for <a href="https://comicrelief.com" class="text-palette-brands-comic"
-						>Comic Relief
-					</a>, a major UK charity, working with
+						>Comic Relief,
+					</a>
+					a major UK charity, working with
 					<span class="text-palette-brands-react">React</span>
 					and <span class="text-palette-brands-aws">AWS Serverless</span>.
 				</p>
@@ -40,7 +40,7 @@
 		</div>
 		<div class="flex justify-center lg:justify-end fill-palette-text flex-1">
 			<img
-				src={paul}
+				src="/images/PaulCartoon.png"
 				alt="Paul being a cartoon"
 				class="fill-palette-text max-h-[400px] max-w-[280px]"
 			/>
