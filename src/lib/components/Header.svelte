@@ -18,7 +18,7 @@
 			<h1 class="font-bold text-3xl">Blog</h1>
 			<span class="font-normal">{postCount} posts found.</span>
 		</div>
-		<div class="flex justify-between w-full items-center gap-6">
+		<div class="flex justify-between w-full md:w-auto items-center gap-6">
 			<Searchbar />
 			<Filter {categories} />
 		</div>

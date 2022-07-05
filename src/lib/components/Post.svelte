@@ -17,7 +17,7 @@
 		<div>
 			<img src={image} alt={title} class="w-full h-[300px] object-cover" />
 			<div class="my-4">
-				<h1 class="text-6xl mb-3 font-semibold">{title}</h1>
+				<h1 class="text-4xl md:text-6xl mb-3 font-semibold">{title}</h1>
 				<p class="font-normal">Posted: {dayjs(date).format('Do MMMM YYYY')}</p>
 			</div>
 		</div>
