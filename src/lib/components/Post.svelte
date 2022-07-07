@@ -7,7 +7,6 @@
 	dayjs.extend(advancedFormat);
 	import { onMount } from 'svelte';
 	import LikesCounter from '$lib/components/icons/LikesCounter.svelte';
-	import Share from '$lib/components/icons/Share.svelte';
 	import PostImage from '$lib/components/PostImage.svelte';
 	export let title;
 	export let image;
