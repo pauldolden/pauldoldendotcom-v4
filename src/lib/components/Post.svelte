@@ -30,7 +30,6 @@
 
 		<div class="flex items-center gap-6">
 			<LikesCounter bind:liked {path} />
-			<Share {path} />
 		</div>
 	</div>
 	<div>
