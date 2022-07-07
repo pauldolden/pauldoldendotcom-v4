@@ -4,15 +4,19 @@
 	import { calculateReadTime } from '$lib/utils/calculateReadTime';
 	import dayjs from 'dayjs';
 	import advancedFormat from 'dayjs/plugin/advancedFormat.js';
-	import { onMount } from 'svelte';
-	import PostImage from './PostImage.svelte';
 	dayjs.extend(advancedFormat);
+	import { onMount } from 'svelte';
+	import LikesCounter from '$lib/components/icons/LikesCounter.svelte';
+	import Share from '$lib/components/icons/Share.svelte';
+	import PostImage from '$lib/components/PostImage.svelte';
 	export let title;
 	export let image;
 	export let date;
 	export let photographer;
 	export let photographerLink;
+	export let path;
 	let readingTime;
+	let liked = false;
 
 	onMount(() => {
 		let text = document.getElementById('article').innerText;
@@ -21,8 +25,13 @@
 </script>
 
 <section class="py-4 pb-7">
-	<div class="mb-4">
+	<div class="mb-4 flex justify-between">
 		<Back path="/blog" />
+
+		<div class="flex items-center gap-6">
+			<LikesCounter bind:liked {path} />
+			<Share {path} />
+		</div>
 	</div>
 	<div>
 		<div>
