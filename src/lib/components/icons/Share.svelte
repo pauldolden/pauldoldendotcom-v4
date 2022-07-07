@@ -5,6 +5,7 @@
 	import { browser } from '$app/env';
 
 	$: webShareAPISupported = browser && typeof navigator.share !== 'undefined';
+	$: console.log(webShareAPISupported);
 
 	const handleClick = () => {
 		if (webShareAPISupported) {
