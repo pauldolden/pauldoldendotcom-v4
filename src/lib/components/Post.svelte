@@ -26,7 +26,6 @@
 <section class="py-4 pb-7">
 	<div class="mb-4 flex justify-between">
 		<Back path="/blog" />
-
 		<!-- <div class="flex items-center gap-6">
 			<LikesCounter bind:liked {path} />
 		</div> -->
