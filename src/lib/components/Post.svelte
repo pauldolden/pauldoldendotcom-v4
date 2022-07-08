@@ -27,9 +27,9 @@
 	<div class="mb-4 flex justify-between">
 		<Back path="/blog" />
 
-		<div class="flex items-center gap-6">
+		<!-- <div class="flex items-center gap-6">
 			<LikesCounter bind:liked {path} />
-		</div>
+		</div> -->
 	</div>
 	<div>
 		<div>
