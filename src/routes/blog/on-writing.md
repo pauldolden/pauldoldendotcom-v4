@@ -7,5 +7,5 @@ photographer: 'Patrick Fore'
 photographerLink: 'https://unsplash.com/@patrickian4'
 description: 'Wherein I discuss my journey into code, and the sad twisting paths that I followed.'
 path: '/on-writing'
-stage: 'published'
+stage: 'draft'
 ---
