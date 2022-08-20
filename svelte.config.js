@@ -16,14 +16,7 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter(),
-		vite: {
-			server: {
-				fs: {
-					allow: ['./static/fonts/']
-				}
-			}
-		}
+		adapter: adapter()
 	}
 };
 
