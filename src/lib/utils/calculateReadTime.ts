@@ -1,6 +1,6 @@
 export function calculateReadTime(text: string) {
-	const wpm = 225;
+	const WPM = 225;
 	const words = text.trim().split(/\s+/).length;
-	const time = Math.ceil(words / wpm);
+	const time = Math.ceil(words / WPM);
 	return time;
 }

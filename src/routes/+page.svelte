@@ -15,8 +15,8 @@
 			<div class="pt-5 text-lg flex flex-col gap-3">
 				<p>
 					Hey, I'm Paul. I'm a developer based in Essex, UK. I currently work as a Full-Stack
-					Engineer for <a href="https://comicrelief.com" class="text-palette-brands-comic"
-						>Comic Relief,
+					Engineer for <a href="https://thefa.com" class="text-palette-brands-thefa"
+						>The Football Association
 					</a>
 					a major UK charity, working with
 					<span class="text-palette-brands-react">React</span>

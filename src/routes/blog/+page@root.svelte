@@ -1,49 +1,41 @@
 <script lang="ts" context="module">
-	throw new Error("@migration task: Check code was safely removed (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292722)");
+	import { categoryStore } from '$lib/stores/stores';
+	// @ts-ignore
+	const allPosts = import.meta.glob('./*.md');
 
-	// import { categoryStore } from '$lib/stores/stores';
-	// // @ts-ignore
-	// const allPosts = import.meta.glob('./*.md');
+	let body: Promise<PostMetadata>[] = [];
+	// Fetch all metadata from .md blog posts
+	for (const path in allPosts) {
+		const metadata = allPosts[path]().then(({ metadata }: { metadata: PostMetadata }) => metadata);
+		body.push(metadata);
+	}
+	// Loader
+	export const load = async () => {
+		let allPosts = await Promise.all(body);
+		// @ts-ignore
+		if (import.meta.env.PROD) {
+			allPosts = allPosts.filter((post) => post.stage === 'published');
+		}
+		allPosts.sort((a, b) => {
+			const dateB = new Date(b.date);
+			const dateA = new Date(a.date);
+			return dateB.getTime() - dateA.getTime();
+		});
+		// Build up post categories dynamically based on unique categories that exist.
+		allPosts.forEach((post) => {
+			categoryStore.update((categories) => {
+				const newCategories = post.category.filter((category) => !categories.includes(category));
 
-	// let body: Promise<PostMetadata>[] = [];
-	// // Fetch all metadata from .md blog posts
-	// for (const path in allPosts) {
-	// 	const metadata = allPosts[path]().then(({ metadata }: { metadata: PostMetadata }) => metadata);
-	// 	body.push(metadata);
-	// }
-	// // Loader
-	// export const load = async () => {
-	// 	let allPosts = await Promise.all(body);
-	// 	// @ts-ignore
-	// 	if (import.meta.env.PROD) {
-	// 		allPosts = allPosts.filter((post) => post.stage === 'published');
-	// 	}
-	// 	allPosts.sort((a, b) => {
-	// 		const dateB = new Date(b.date);
-	// 		const dateA = new Date(a.date);
-	// 		return dateB.getTime() - dateA.getTime();
-	// 	});
-	// 	// Build up post categories dynamically based on unique categories that exist.
-	// 	allPosts.forEach((post) => {
-	// 		categoryStore.update((categories) => {
-	// 			const newCategories = post.category.filter((category) => !categories.includes(category));
-
-	// 			return [...categories, ...newCategories];
-	// 		});
-	// 	});
-	// 	return {
-	// 		allPosts
-	// 	};
-	// };
+				return [...categories, ...newCategories];
+			});
+		});
+		return {
+			allPosts
+		};
+	};
 </script>
 
 <script lang="ts">
-	throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
-	// Suggestion (check code before using, and possibly convert to data.X access later):
-	// import type { PageData } from './$types';
-	// export let data: PageData;
-	// $: ({ allPosts } = data);
-
 	import Header from '$lib/components/Header.svelte';
 	import PostCard from '$lib/components/PostCard.svelte';
 	import type { PostMetadata } from '$lib/types';

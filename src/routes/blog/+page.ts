@@ -1,8 +1,8 @@
 import { categoryStore } from '$lib/stores/stores';
-// @ts-ignore
+import type { PostMetadata } from '$lib/types';
 const allPosts = import.meta.glob('./*.md');
 
-let body: Promise<PostMetadata>[] = [];
+const body: Promise<PostMetadata>[] = [];
 // Fetch all metadata from .md blog posts
 for (const path in allPosts) {
 	const metadata = allPosts[path]().then(({ metadata }: { metadata: PostMetadata }) => metadata);
@@ -11,7 +11,6 @@ for (const path in allPosts) {
 // Loader
 export const load = async () => {
 	let allPosts = await Promise.all(body);
-	// @ts-ignore
 	if (import.meta.env.PROD) {
 		allPosts = allPosts.filter((post) => post.stage === 'published');
 	}
@@ -28,7 +27,6 @@ export const load = async () => {
 			return [...categories, ...newCategories];
 		});
 	});
-	throw new Error("@migration task: Migrate this return statement (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292693)");
 	return {
 		allPosts
 	};
